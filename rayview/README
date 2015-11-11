@@ -1,0 +1,13 @@
+Rayview reads a rayshade input file and opens a graphics window into
+which images are rendered using GL (SGI / RS6000) library calls.
+
+Support is provided for most rayshade primitives and light sources.
+Support for CSG is limited to drawing the bounding boxes of those
+objects used in each CSG object.
+
+Rayview is intended to be an example of the kind of application program
+that can be written using the rayshade libraries.  You are encouraged
+to improve or otherwise modify rayview to suit your needs.
+
+To compile, edit the Makefile, set GRAPHICSLIB and SPHERELIB appropriately,
+and run make.

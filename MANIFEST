@@ -1,0 +1,235 @@
+   File Name		Archive #	Description
+-----------------------------------------------------------
+ Configure                 19	Configuration script
+ Doc                        1	Rayshade documents
+ Doc/BUGS                   1	Known bugs
+ Doc/Changes                3	Rencent changes
+ Doc/Copyright              1	Copyright information
+ Doc/Globals                5	Global variable information
+ Doc/Guide                  1	User's Guide
+ Doc/Guide/README           1	User's Guide information
+ Doc/Guide/animate.tex      8	Animation documentation
+ Doc/Guide/camera.tex      10	Camera documentation module
+ Doc/Guide/guide.tex        2	Rayshade user's guide and ref manual
+ Doc/Guide/height.tex       5	Heightfield documentation
+ Doc/Guide/intro.tex        6	Introduction
+ Doc/Guide/lights.tex      12	Light source documentation
+ Doc/Guide/objects.tex     16	Object documentation
+ Doc/Guide/options.tex     10	Command-line option document
+ Doc/Guide/preface.tex      7	Babblings
+ Doc/Guide/running.tex     15	Overview of running rayshade
+ Doc/Guide/surfaces.tex    13	Description of surface properties
+ Doc/Guide/texture.tex     15	Texturing document
+ Doc/Guide/transform.tex    3	Transformations
+ Doc/TODO                   3	List of proposed projects
+ Doc/quickref.txt          13	Rayshade quick reference guide
+ Examples                   1	Example rayshade input
+ Examples/ashtray.def.ray   1	Ashtray object
+ Examples/ashtray.ray       1	Ashtray scene
+ Examples/balls.ray         2	Ten spheres
+ Examples/blob.ray          1	Blob scene
+ Examples/boxball.ray       3	Sphere/box csg scene
+ Examples/coin.ray          2	Flipping coin demo
+ Examples/csg.ray           5	Csg scene
+ Examples/glass.def.ray     1	Glass object
+ Examples/glass.ray         1	Glass scene
+ Examples/mtv.ray           5	Muse Ick TV logo
+ Examples/planet.map        6	Colormap used in planet.ray
+ Examples/planet.ray        1	Texture-mapped sphere
+ Examples/pool.ray          7	Gaudy pool table
+ Examples/solids.ray        2	Sphere and cone
+ Examples/stripe.ray        1	Stripe example
+ MANIFEST                   1	
+ Makefile                   1	Toplevel Makefile
+ README                     1	General information
+ Reconfigure                3	Extract .SH files from given config
+ blurb.urt                 11	Utah Raster Toolkit information
+ config.H                  10	Example configuration header
+ config.h.SH               10	Script to generate config.h
+ etc                        1	Tools and other goodies
+ etc/Makefile.SH            2	Script to generate tool Makefile
+ etc/malloc.sgi             4	Suggested malloc tuning on sgi machines
+ etc/nff2shade.awk          7	NFF-->rayshade conversion awk script
+ etc/rsconvert              1	Old rayshade input --> new conversion
+ etc/rsconvert/Makefile.SH  4	Script to generate conversion Makefile
+ etc/rsconvert/lex.l        8	Lexical analysis for converter
+ etc/rsconvert/main.c       4	Conversion driver
+ etc/rsconvert/yacc.y      16	Conversion actions
+ libray                     1	Ray tracing library	
+ libray/Makefile            1	libray Makefile	
+ libray/libcommon           1	Common routines/data structures
+ libray/libcommon/Makefile.SH  4	Script to produce Makefile
+ libray/libcommon/color.h   3	Color definitions
+ libray/libcommon/common.h  5	Headers for useful routines
+ libray/libcommon/error.h   3	Error reporting definitions
+ libray/libcommon/expr.c   10	Expression handling
+ libray/libcommon/expr.h    3	Expression definitions
+ libray/libcommon/memory.c  4	Memory allocation
+ libray/libcommon/ray.h     2	Ray definitions
+ libray/libcommon/rotate.c  6	Rotation methods
+ libray/libcommon/rotate.h  3	Rotationdefinitions
+ libray/libcommon/sampling.c  7	Sampling control
+ libray/libcommon/sampling.h  3	Sampling definitions
+ libray/libcommon/scale.c   4	Scaling methods
+ libray/libcommon/scale.h   2	Scaling definitions
+ libray/libcommon/transform.c 14	Transformation routines
+ libray/libcommon/transform.h  5	Transformation definitions
+ libray/libcommon/translate.c  4	Translation methods
+ libray/libcommon/translate.h  3	Translation definitions
+ libray/libcommon/vecmath.c  7	Vector manipulation routines
+ libray/libcommon/vector.h  5	Vector definitions
+ libray/libcommon/xform.c   5	Linear transformation methods
+ libray/libcommon/xform.h   5	Linear transformation definitions
+ libray/libimage            1	Image reading library
+ libray/libimage/Makefile.SH  4	Script to produce imagelib Makefile
+ libray/libimage/image.c    9	Image reading routines
+ libray/libimage/image.h    3	Image reading definitions
+ libray/liblight            1	Light source library
+ libray/liblight/Makefile.SH  4	Script to produce liblight Makefile
+ libray/liblight/extended.c  6	Extended light source methods
+ libray/liblight/extended.h  2	Extended source definitions
+ libray/liblight/infinite.c  4	Infinite light source methdos
+ libray/liblight/infinite.h  2	Infinite source definitions
+ libray/liblight/jittered.c  5	Jittered light source methods
+ libray/liblight/jittered.h  2	Jittered source definitions
+ libray/liblight/light.c    5	Lighting calculations
+ libray/liblight/light.h    5	Light definitions
+ libray/liblight/point.c    4	Point source methods
+ libray/liblight/point.h    2	Point source definitions
+ libray/liblight/shadow.c  11	Shadow determination routines
+ libray/liblight/spot.c     7	Spot light methods
+ libray/liblight/spot.h     2	Spot light definitions
+ libray/libobj              1	Object library
+ libray/libobj/Makefile.SH  4	Script to generate libobj Makefile
+ libray/libobj/blob.c      17	Blobby molecule methods
+ libray/libobj/blob.h       4	Blobby molecule definitions 
+ libray/libobj/bounds.c     9	Bounding box routines
+ libray/libobj/bounds.h     3	Bounding box definitions
+ libray/libobj/box.c        7	Box methods
+ libray/libobj/box.h        2	Box defininitions
+ libray/libobj/cone.c      10	Cone methods
+ libray/libobj/cone.h       2	Cone definitions
+ libray/libobj/csg.c       14	Construct solid geometry methods
+ libray/libobj/csg.h        3	CSG definitions
+ libray/libobj/cylinder.c   8	Cylinder methods
+ libray/libobj/cylinder.h   2	Cylinder definitions
+ libray/libobj/disc.c       8	Disc methods
+ libray/libobj/disc.h       2	Disc definitions
+ libray/libobj/geom.c      13	Geometric object support routines
+ libray/libobj/geom.h       8	Geometric object definitions
+ libray/libobj/grid.c      14	Uniform spatial subdivision methods
+ libray/libobj/grid.h       4	Uniform spatial subdivision definitions
+ libray/libobj/hf.c        16	Height field methods
+ libray/libobj/hf.h         6	Height field definitions
+ libray/libobj/instance.c   6	Object instantiation methods	
+ libray/libobj/instance.h   3	Instantiation definitions	
+ libray/libobj/intersect.c  8	Intersection routines
+ libray/libobj/list.c       7	List methods        
+ libray/libobj/list.h       2	List definitions
+ libray/libobj/plane.c      7	Plane methods
+ libray/libobj/plane.h      2	Plane definitions
+ libray/libobj/poly.c      12	Polygon methods
+ libray/libobj/poly.h       3	Polygon definitions
+ libray/libobj/roots.c      8	Cubic and quartic root finding routines
+ libray/libobj/sphere.c     8	Sphere methods
+ libray/libobj/sphere.h     2	Sphere definitions
+ libray/libobj/torus.c     12	Torus methods
+ libray/libobj/torus.h      3	Torus definitions
+ libray/libobj/triangle.c  15	Triangle methods
+ libray/libobj/triangle.h   4	Triangle definitions
+ libray/libsurf             1	Surface library
+ libray/libsurf/Makefile.SH  4	Script to generate libsurf Makefile
+ libray/libsurf/atmosphere.c  5	Atmospheric effects support routines
+ libray/libsurf/atmosphere.h  3	Atmospheric effects defintions
+ libray/libsurf/fog.c       4	Fog methods
+ libray/libsurf/fog.h       2	Fog definitions
+ libray/libsurf/fogdeck.c   6	Fog deck
+ libray/libsurf/fogdeck.h   2	Fog deck definitions
+ libray/libsurf/mist.c      4	Mist methods
+ libray/libsurf/mist.h      2	Mist definitions
+ libray/libsurf/surface.c   7	Surface support routines
+ libray/libsurf/surface.h   5	Surface definitions
+ libray/libsurf/surfshade.c  9	Surface shading routines
+ libray/libtext             1	Texturing library
+ libray/libtext/Makefile.SH  4	Script to generate libtext Makefile
+ libray/libtext/blotch.c    3	Blotch methods
+ libray/libtext/blotch.h    2	Blotch definitiosn
+ libray/libtext/bump.c      3	Bump texture methods
+ libray/libtext/bump.h      1	Bump definitions
+ libray/libtext/checker.c   3	Checker texture methods
+ libray/libtext/checker.h   2	Checker definitions
+ libray/libtext/cloud.c     6	Cloud texture methods
+ libray/libtext/cloud.h     2	Cloud definitions
+ libray/libtext/fbm.c       5	Fractional Brownian motion methods
+ libray/libtext/fbm.h       2	fBm definitions
+ libray/libtext/fbmbump.c   3	fBm-based bump methods
+ libray/libtext/fbmbump.h   1	fBm bump definitions
+ libray/libtext/gloss.c     3	Glossy reflection methods
+ libray/libtext/gloss.h     1	Glossy reflection definitions
+ libray/libtext/imagetext.c 10	Image texturing methods
+ libray/libtext/imagetext.h  3	Image texturing definitions
+ libray/libtext/mapping.c   9	Inverse mapping methods
+ libray/libtext/mapping.h   2	Inverse mapping definitions
+ libray/libtext/marble.c    4	Marble texture methods
+ libray/libtext/marble.h    2	Marble definitions
+ libray/libtext/mount.c     3	Mountain texture methods
+ libray/libtext/mount.h     2	Mountain texture definitions
+ libray/libtext/noise.c    11	Noise function
+ libray/libtext/sky.c       4	Sky texture methods
+ libray/libtext/sky.h       2	Sky texture definitions
+ libray/libtext/stripe.c    6	Stripe texture methods
+ libray/libtext/stripe.h    2	Stripe texture definitions
+ libray/libtext/textaux.c   9	Texturing support routines
+ libray/libtext/texture.c   9	Texturing driving routines
+ libray/libtext/texture.h   5	Texture definitions
+ libray/libtext/windy.c     4	Windy-blown water texture
+ libray/libtext/windy.h     2	Definitions for windy texture
+ libray/libtext/wood.c      5	Wood texture methods
+ libray/libtext/wood.h      1	Wood texture definitions
+ libshade                   1	libray/rayshade interface library	
+ libshade/Makefile.SH       6	Makefile for rayshade library	
+ libshade/builtin.c         3	Builtin functions
+ libshade/builtin.h         1	Builtin definitions
+ libshade/defaults.h        4	Defaults	
+ libshade/funcdefs.h        2	Various prototypes
+ libshade/lex.l             9	Lexical analysis
+ libshade/lightdef.c        7	Light definition
+ libshade/misc.c            8	Useful routines	
+ libshade/objdef.c          5	Object definition
+ libshade/options.c        12	Option-parsing
+ libshade/options.h         7	Option declarations
+ libshade/picture.c        11	Image file manipulation	
+ libshade/picture.h         2	Image file definitions	
+ libshade/rayshade.h        1	Useful includes for libshade
+ libshade/setup.c           9	Initializtion and cleanup	
+ libshade/shade.c          13	Shading calculations
+ libshade/stats.c           8	Statistics reporting	
+ libshade/stats.h           3	Statistics header
+ libshade/surfdef.c         6	Surface definition	
+ libshade/symtab.c          7	Symbol table manipulation
+ libshade/symtab.h          3	Symbol table declarations
+ libshade/viewing.c        12	Camera manipulation
+ libshade/viewing.h         3	Viewing declarations
+ libshade/yacc.y           18	Rayshade input parsing	
+ patchlevel.h               1	Patch level information	
+ raypaint                   1	Raypaint application	
+ raypaint/Makefile.SH       6	Raypaint Makefile
+ raypaint/README            5	General raypaint information
+ raypaint/glgraphics.c      6	SGI graphics support	
+ raypaint/main.c            6	Raypaint main
+ raypaint/render.c         17	Driving routines
+ raypaint/version.c         1	Version information	
+ raypaint/xgraphics.c      11	X11 graphics support
+ rayshade                   1	Rayshade application
+ rayshade/Makefile.SH       6	Rayshade Makefile
+ rayshade/main.c            5	Rayshade main
+ rayshade/raytrace.c       14	Screen sampling, etc.
+ rayshade/raytrace.h        2	Sampling definitions
+ rayshade/version.c         1	Version information
+ rayview                    1	Rayshade previewer
+ rayview/Makefile.SH        6	Makefile for previewer
+ rayview/README             1	General rayview information 
+ rayview/glmethods.c       18	Support routines for SGI's GL
+ rayview/main.c             4	Preview driver
+ rayview/spheregen.c       11	Sphere generation
+ rayview/version.c          1	Version information

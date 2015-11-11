@@ -1,0 +1,65 @@
+#!/bin/sh
+#
+# Reconfigure
+# Extract .SH files using values in config.sh
+#
+# Useful in environments in which the source tree
+# is used to build executables for more than one kind of machine.
+# After running Configure on a particular machine, copy the
+# resulting config.sh to, for example, config.sh.SPARC.
+# When you have to recompile for some reason, running
+# "Reconfigure config.sh.SPARC" should produce the correct Makefiles
+# and the like.
+#
+# If you need to run "make depend" for a machine other than the one
+# that the Configure script was last run for, you will need to remake
+# the "mkdep" script by removing it, copying the appropriate
+# config.sh.MACHINE file to config.sh, and running "Configure -d".
+#
+
+case "$1" in
+'')
+	configfile="./config.sh"
+	;;
+*)
+	if test -f "$1" ; then
+		configfile="$1"
+	else
+		echo "$1 does not exist."
+		exit
+	fi
+esac
+
+echo "Reconfiguring using $configfile."
+. $configfile
+
+echo " "
+echo "Doing variable substitutions on .SH files..."
+set x `awk '{print $1}' <MANIFEST | $grep '\.SH'`
+shift
+case $# in
+0) set x *.SH; shift;;
+esac
+if test ! -f $1; then
+    shift
+fi
+for file in $*; do
+    case "$file" in
+    */*)
+	dir=`$expr X$file : 'X\(.*\)/'`
+	file=`$expr X$file : 'X.*/\(.*\)'`
+	(cd $dir && . $file)
+	;;
+    *)
+	. $file
+	;;
+    esac
+done
+if test -f config.h.SH; then
+    if test ! -f config.h; then
+	: oops, they left it out of MANIFEST, probably, so do it anyway.
+	. config.h.SH
+    fi
+fi
+
+echo "You must run 'make depend' then 'make'."

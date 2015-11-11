@@ -1,0 +1,53 @@
+[ Mike Gigante notes that when rendering exteremely large datasets
+  (consisting primarily of triangles in his case), one may use the
+  'mallopt()' routine on certain machines to improve performance
+  significantly (to say the least). -- CEK ]
+  
+
+From mg@godzilla.cgl.rmit.OZ.AU  Tue Aug 21 14:35:08 1990
+Received: from godzilla.cgl.rmit.oz.au by weedeater.math.yale.edu via SMTP; Tue, 21 Aug 90 14:35:08 -0400
+Received: by godzilla 
+Date: Wed, 22 Aug 90 05:16:40 EST
+From: mg@godzilla.cgl.rmit.OZ.AU (Mike Gigante)
+Message-Id: <9008211916.4715@godzilla>
+To: craig@weedeater.math.yale.edu
+Subject: malloc stuff
+Status: RO
+
+Craig,
+we spoke after the ray tracing sig about malloc stuff. Here is that
+stuff I promised to send you. 
+
+1) include <malloc.h> in your main program
+2) make the following code the *first* executable statements
+
+#ifdef sgi
+  /*
+   * try to tune the malloc stuff. First thing to note is that most
+   * allocated blocks (at least for triangles) are less than 200 bytes...
+   */
+  mallopt(M_MXFAST, 200);
+  /*
+   * allocate a big chunk at a time - esp since we are going to use LOTS
+   * of memory!
+   */
+  mallopt(M_BLKSZ, 65536);
+  /*
+   * don't try too hard when looking for free'd memory to re-use. This
+   * avoids the heavy paging penalty we have seen... In fact don't look
+   * at all!
+   */
+  mallopt(M_MXCHK, 0);
+#endif
+
+and wow! *HUGE* improvments for large models. Just to remind you, it was
+a difference of 88 min CPU time over 10 hour period (just to read a model)
+vs about 2 minutes cpu/elapsed. Because of the M_MXCHK call, the working
+set was larger but it didn't make much difference..
+
+BTW, you should check the 200 bytes in the M_MXFAST call. Make it larger
+than the common malloc sizes (say for mallocing triangle/poly structs).
+
+Hope this is useful.
+
+Mike Gigante, RMIT
